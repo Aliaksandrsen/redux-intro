@@ -1,20 +1,20 @@
 const initialState = {
-    firstName: 'Oleg',
-    secondName: 'Pavlov'
+  firstName: 'Oleg',
+  secondName: 'Pavlov'
 };
 
 
 const rootReduser = (state = initialState, action) => {
-    switch (action.type) {
-        case 'ACTION_CHANGE_FIRST_NAME':
-            return { ...state, firstName: action.payload };
+  switch (action.type) {
+    case 'ACTION_CHANGE_FIRST_NAME':
+      return { ...state, firstName: action.payload };
 
-        case 'ACTION_CHANGE_SECOND_NAME':
-            return { ...state, secondName: action.payload };
+    case 'ACTION_CHANGE_SECOND_NAME':
+      return { ...state, secondName: action.payload };
 
-        default:
-            return state;
-    }
+    default:
+      return state;
+  }
 }
 
-export {rootReduser};
+export { rootReduser };
