@@ -13,7 +13,6 @@ export const ACTION_CHANGE_SECOND_NAME = 'ACTION_CHANGE_SECOND_NAME';
 const store = createStore(rootReduser, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 // console.log(store.getState());
 
-
 ReactDOM.render(
   <Provider store={store}>
     <MainComponent />
