@@ -3,37 +3,33 @@ import { connect } from 'react-redux';
 
 import { changeFirstName, changeSecondName } from '../store/actions';
 
-class MainComponent extends React.Component {
-
-  render() {
-    // console.log(this.props);
-    const { firstName, secondName, changeFirstName, changeSecondName } = this.props;
-    return (<div>
-      <div>
-        <input
-          type='text'
-          value={this.props.firstName}
-          plaseholder="firstName"
-          onChange={(event) => {
-            changeFirstName(event.target.value);
-          }}
-        >
-        </input>
-      </div>
-      <div>
-        <input
-          type='text'
-          value={this.props.secondName}
-          plaseholder="secondName"
-          onChange={(event) => {
-            changeSecondName(event.target.value);
-          }}
-        >
-        </input>
-      </div>
-      <div>{firstName} {secondName}</div>
-    </div>)
-  }
+const MainComponent = ({ firstName, secondName, changeFirstName, changeSecondName }) => {
+  return (
+  <div>
+    <div>
+      <input
+        type='text'
+        value={firstName}
+        plaseholder="firstName"
+        onChange={(event) => {
+          changeFirstName(event.target.value);
+        }}
+      >
+      </input>
+    </div>
+    <div>
+      <input
+        type='text'
+        value={secondName}
+        plaseholder="secondName"
+        onChange={(event) => {
+          changeSecondName(event.target.value);
+        }}
+      >
+      </input>
+    </div>
+    <div>{firstName} {secondName}</div>
+  </div>)
 }
 
 const mapStateToProps = (state) => {
